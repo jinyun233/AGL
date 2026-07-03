@@ -1,0 +1,31 @@
+using System;
+using System.Diagnostics;
+using MyLauncher.Models;
+
+namespace MyLauncher.Core
+{
+  public class GameLauncher
+  {
+    public bool Launch(Game game)
+    {
+      if (game == null || string.IsNullOrEmpty(game.ExePath))
+      {
+        Console.WriteLine("游戏信息不完整，无法启动");
+        return false;
+      }
+
+      try
+      {
+        // 这是核心！启动exe
+        Process.Start(game.ExePath);
+        Console.WriteLine($"已启动: {game.Name}");
+        return true;
+      }
+      catch (Exception ex)
+      {
+        Console.WriteLine($"启动失败: {ex.Message}");
+        return false;
+      }
+    }
+  }
+}
