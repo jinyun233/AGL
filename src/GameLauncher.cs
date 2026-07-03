@@ -16,7 +16,7 @@ namespace MyLauncher.Core
 
       try
       {
-        // 这是核心！启动exe
+        // 核心步骤，用于启动exe
         Process.Start(game.ExePath);
         Console.WriteLine($"已启动: {game.Name}");
         return true;
