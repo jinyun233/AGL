@@ -1,8 +1,8 @@
 using System;
 using System.Diagnostics;
-using MyLauncher.Models;
+using Launcher.Models;
 
-namespace MyLauncher.Core
+namespace Launcher.Core
 {
   public class GameLauncher
   {
