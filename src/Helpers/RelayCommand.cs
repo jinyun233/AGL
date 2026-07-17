@@ -3,9 +3,8 @@ using System.Windows.Input;
 
 namespace Launcher.Helpers
 {
-  /// <summary>
-  /// 把方法包装成命令，供界面绑定
-  /// </summary>
+
+  // 把方法包装成命令，供界面绑定
   public class RelayCommand : ICommand
   {
     private readonly Action _execute;
